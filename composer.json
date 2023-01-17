@@ -1,0 +1,35 @@
+{
+    "name": "eighteen73/nginx-proxy-manager-api",
+    "description": "PHP Library for controlling NginxProxyManager https://github.com/NginxProxyManager",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matt Jones",
+            "email": "matt@eighteen73.co.uk"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2",
+        "guzzlehttp/guzzle": "^7.4",
+        "ext-json": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Eighteen73\\NginxProxyManager\\" : "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Eighteen73\\NginxProxyManager\\Test\\" : "tests/"
+        }
+    },
+    "prefer-stable": true,
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "test": "./vendor/bin/phpunit"
+    }
+}
