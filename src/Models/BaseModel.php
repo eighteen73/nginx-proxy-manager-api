@@ -4,7 +4,7 @@ namespace Eighteen73\NginxProxyManager\Models;
 
 abstract class BaseModel {
 
-    protected ?int $id = null;
+    public ?int $id = null;
 
     public static function fromArray(array $data): static
     {
