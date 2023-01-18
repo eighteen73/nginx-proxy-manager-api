@@ -32,7 +32,7 @@ class Host extends BaseModel implements Model
 
     public bool $http2_support = true;
 
-    public array $locations = [];
+    public ?array $locations = [];
 
     public array $meta = [
         'dns_challenge' => true,

@@ -8,12 +8,14 @@ abstract class BaseModel {
 
     public static function fromArray(array $data): static
     {
-        $host = new static;
+        $model = new static;
 
         foreach ($data as $k => $v) {
-            if (property_exists($host, $k)) {
-                $host->{$k} = $v;
+            if (property_exists($model, $k)) {
+                $model->{$k} = $v;
             }
         }
+
+        return $model;
     }
 }

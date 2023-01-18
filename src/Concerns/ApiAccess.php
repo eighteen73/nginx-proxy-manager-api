@@ -30,7 +30,7 @@ trait ApiAccess {
                 ]
             ]);
 
-            $token = json_decode($response->getBody()->getContents());
+            $token = json_decode($response->getBody()->getContents(), true);
         } catch (\Exception $e) {
             throw new \Exception('Unable to get access token: ' . $e->getMessage());
         }
@@ -74,6 +74,6 @@ trait ApiAccess {
             'json' => $data,
         ]);
 
-        return json_decode($response->getBody()->getContents());
+        return json_decode($response->getBody()->getContents(), true);
     }
 }
