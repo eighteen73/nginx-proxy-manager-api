@@ -17,7 +17,7 @@ trait ApiAccess {
     public static function createAccessToken(string $baseUrl, string $email, string $password): string
     {
         $client = new Client([
-            'base_url' => $baseUrl,
+            'base_uri' => $baseUrl,
         ]);
 
         try {
@@ -61,7 +61,7 @@ trait ApiAccess {
     protected function request(string $type, string $endpoint, ?array $query = null, ?array $data = null): mixed
     {
         $client = new Client([
-            'base_url' => $this->baseUrl,
+            'base_uri' => $this->baseUrl,
             'headers' => [
                 'Authorization' => 'Bearer ' . $this->accessToken,
                 'Accept'        => 'application/json',
