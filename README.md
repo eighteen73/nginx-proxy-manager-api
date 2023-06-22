@@ -10,7 +10,7 @@ PHP Library for [NginxProxyManager](https://github.com/NginxProxyManager) API.
 ## Installation
 
 ```bash
-composer require eighteen73/nginx-proxy-manager-php
+composer require eighteen73/nginx-proxy-manager-api
 ```
 
 Otherwise just download the package and add it to the autoloader.
