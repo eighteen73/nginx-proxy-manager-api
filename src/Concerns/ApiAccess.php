@@ -5,9 +5,6 @@ namespace Eighteen73\NginxProxyManager\Concerns;
 use GuzzleHttp\Client;
 
 trait ApiAccess {
-
-    protected const TOKEN_EXPIRE_AGE = '10y';
-
     protected string $baseUrl;
 
     protected string $accessToken;
@@ -23,8 +20,6 @@ trait ApiAccess {
         try {
             $response = $client->post('/api/tokens', [
                 'json' => [
-                    'scope' => 'user',
-                    'expiry' => self::TOKEN_EXPIRE_AGE,
                     'identity' => $email,
                     'secret' => $password,
                 ]
